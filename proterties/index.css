@@ -1,0 +1,172 @@
+#title {
+  width: 100%;
+  text-align: center;
+}
+#title h2 {
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 38px;
+  margin-bottom: 1rem;
+}
+#section {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.contain {
+  overflow: hidden;
+  margin: 10px;
+  margin: 1rem;
+  position: relative;
+  text-decoration: none;
+  background: #ebebeb;
+  width: calc(100%);
+  box-shadow: 3px 3px rgb(220 192 192 / 42%);
+  transform: scale(1);
+  border-radius: 10px;
+}
+.contain:hover {
+  box-shadow: 3px 3px rgb(161, 160, 160);
+  transform: scale(1.1);
+  transition: transform 0.4s;
+}
+@media (min-width: 768px) {
+  .contain {
+    width: calc(25% - 2rem);
+  }
+}
+.contain .image {
+  position: relative;
+}
+.image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.contain .detail {
+  position: relative;
+  padding: 0.1rem 2rem;
+}
+.detail p {
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 1.2;
+  color: #505050;
+  padding-bottom: 20px;
+  border-bottom: solid 1px rgb(7, 7, 7);
+}
+.detail p span {
+  display: block;
+  font-size: 8px;
+  margin-top: 10px;
+  text-transform: uppercase;
+}
+#detail_house {
+  display: none;
+  background-color: #dcd9d9;
+  display: flex;
+  justify-content: space-between;
+}
+#detail_house .detail_left {
+  width: 58%;
+}
+.detail_left img {
+  width: 100%;
+  height: 60%;
+}
+.detail_left p {
+  padding: 10px 42px;
+  line-height: 1.5em;
+}
+.detail_right {
+  margin-left: 60px;
+  flex: 1;
+}
+.detail_right .back {
+  overflow: hidden;
+  cursor: pointer;
+}
+.detail_right .back p {
+  width: 36px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 36px;
+  font-size: 20px;
+  height: 36px;
+  border: 2px solid black;
+  float: right;
+  margin-right: 20px;
+  transform: rotate(0deg);
+  opacity: 0.5;
+}
+.detail_right .back p:hover {
+  transform: rotate(360deg);
+  transition: transform 0.5s;
+  will-change: transform;
+}
+.detail_right .shopping_car {
+  overflow: hidden;
+  display: inline-block;
+  height: 30px;
+  padding: 0 10px;
+  text-align: center;
+}
+.shopping_car img {
+  height: 100%;
+  cursor: pointer;
+}
+.shopping_car p {
+  margin: 4px 0 0 4px;
+  float: right;
+}
+.detail_right h3 {
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 1.230769231;
+  margin-right: 10%;
+}
+.detail_right h3 span {
+  display: block;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+.detail_fact {
+  margin: 20px 0;
+}
+.detail_fact p {
+  display: inline-block;
+  margin: 10px 0;
+}
+.detail_argent {
+  color: #fff;
+  padding: 10px;
+  margin-top: 20px;
+  background: rgba(125, 0, 58, 0.99);
+}
+.detail_argent_contain {
+  position: relative;
+  padding: 20px 0 20px 20px;
+}
+.detail_argent_contain .peoImg {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  position: absolute;
+  right: -10px;
+  top: -80px;
+}
+.detail_right .contect {
+  margin-top: 40px;
+  height: 24px;
+}
+.detail_argent h6 {
+  font-size: 2rem;
+  display: inline;
+}
+.contect img {
+  float: left;
+  height: 100%;
+  margin-right: 10px;
+}
