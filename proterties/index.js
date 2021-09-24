@@ -120,7 +120,7 @@ function back() {
   title.style.display = 'block'
   detail_house.style.display = 'none'
   console.log(index)
-
+  setTimeout(() => window.parent.pageHeight(document.body.scrollHeight + 20), 0)
   // window.parent.applicationCache(shopping_car)
 }
 function add() {

@@ -90,4 +90,5 @@ function detailInfo() {
 function back() {
   contain.style.display = 'flex'
   detail_house.style.display = 'none'
+  setTimeout(() => window.parent.pageHeight(document.body.scrollHeight + 20), 0)
 }
