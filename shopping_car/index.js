@@ -2,7 +2,7 @@ import { data } from '../data.js'
 let contain = document.getElementById('section')
 let detail_house = document.getElementById('detail_house')
 let content = ''
-let shopList = sessionStorage.getItem('shopping_car')
+let shopList = localStorage.getItem('shopping_car')
 console.log(shopList)
 let index, arr
 if (shopList) {

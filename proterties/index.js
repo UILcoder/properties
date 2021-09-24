@@ -4,7 +4,7 @@ let detail_house = document.getElementById('detail_house')
 let title = document.getElementById('title')
 let content = ''
 let index, inimg1, inimg2, outimg1, outimg2
-let shopping_car = sessionStorage.getItem('shopping_car')
+let shopping_car = localStorage.getItem('shopping_car')
 if (shopping_car) {
   shopping_car = shopping_car.split(',')
 }
@@ -133,7 +133,7 @@ function add() {
   outimg2[index].style.display = 'inline-block'
   inimg1.style.display = 'none'
   inimg2.style.display = 'inline-block'
-  sessionStorage.setItem('shopping_car', shopping_car)
+  localStorage.setItem('shopping_car', shopping_car)
   return false
 }
 function low() {
@@ -143,6 +143,6 @@ function low() {
   outimg1[index].style.display = 'inline-block'
   inimg2.style.display = 'none'
   inimg1.style.display = 'inline-block'
-  sessionStorage.setItem('shopping_car', shopping_car)
+  localStorage.setItem('shopping_car', shopping_car)
   return false
 }

@@ -9,7 +9,7 @@ arr.forEach(item => {
   item.onclick = styleActive
 
 });
-sessionStorage.setItem('shopping_car', [])
+localStorage.setItem('shopping_car', [])
 let fixHeight = document.body.offsetHeight - 240
 ifm.style.height = fixHeight + 'px'
 function styleActive() {
