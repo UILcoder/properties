@@ -52,9 +52,9 @@
   }
 }
 @media screen and (max-width: 300px) {
-  #detail_house {
+  /* #detail_house {
     visibility: hidden;
-  }
+  } */
 }
 
 @media screen and (min-width: 560px) {
