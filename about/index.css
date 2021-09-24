@@ -3,7 +3,7 @@
 }
 #title h2 {
   font-weight: 400;
-  font-size: 30px;
+  /* font-size: 30px; */
   line-height: 38px;
   margin-bottom: 1rem;
 }
@@ -26,7 +26,7 @@
 }
 .artical_right .quote {
   position: relative;
-  font-size: 21px;
+  /* font-size: 21px; */
   min-height: 70px;
   margin-top: 80px;
   margin-bottom: 0;

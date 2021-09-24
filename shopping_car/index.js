@@ -1,16 +1,17 @@
 import { data } from '../data.js'
-let url = document.location.href.split('=')[1]
 let contain = document.getElementById('section')
 let detail_house = document.getElementById('detail_house')
 let content = ''
-let shopList = []
-let index
-if (url) {
-  shopList = url.split(',')
-  shopList = shopList.map(i => data[i])
+let shopList = sessionStorage.getItem('shopping_car')
+console.log(shopList)
+let index, arr
+if (shopList) {
+  shopList = shopList.split(',').map(i => data[i])
   console.log(shopList)
   shopList.map(item => {
     content += `<div class='contain'>
+     <span class='type'>${item.blob}
+       </span >
       <div class="image">
         <img
           src='${item.img}' />
@@ -18,12 +19,13 @@ if (url) {
       <div class="detail">
         <p>${item.protertyName}
           <span>${item.org}</span>
+          <img class='img2' src="../image/activeLove.svg">
         </p>
       </div>
     </div>`
   })
   contain.innerHTML = content
-  let arr = [...document.getElementsByClassName('contain')]
+  arr = [...document.getElementsByClassName('contain')]
   arr.forEach(item => {
     item.onclick = detailInfo
   });
@@ -37,15 +39,17 @@ function detailInfo() {
   index = arr.findIndex(i => i == this)
   console.log(shopList[index])
   let item = shopList[index]
-  detail_house.innerHTML = ` <div class="detail_left">
-      <img
-        src='${item.img}'>
+  detail_house.innerHTML = `<div class="detail_left">
+      <img src='${item.img}'/>
       <p>${item.inductor}</p>
-    </div>
+      </div>
     <div class="detail_right">
       <div class="back">
         <p>X</p>
       </div>
+        <span class='type'>${item.blob}
+      <b>${item.type}</b >
+       </span >
       <h3>${item.protertyName}
         <span>${item.org}</span >
       </h3 >
@@ -71,10 +75,10 @@ function detailInfo() {
         <p>${item.position}</p>
         <h6>${item.positionName}</h6>
         <div class="contect"><img src="../image/email.svg" />
-          <p>email ${item.positionName}</p>
+          <span>email ${item.positionName}</span>
         </div>
         <div class="contect"><img src="../image/tel.svg" />
-          <p> ${item.tel}</p>
+          <span> ${item.tel}</span>
         </div>
         </div>
       </div>
@@ -82,7 +86,6 @@ function detailInfo() {
   document.getElementsByClassName('back')[0].onclick = back
   contain.style.display = 'none'
   detail_house.style.display = 'flex'
-  addShop()
 }
 function back() {
   contain.style.display = 'flex'
