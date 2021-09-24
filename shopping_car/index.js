@@ -17,10 +17,12 @@ if (shopList) {
           src='${item.img}' />
       </div>
       <div class="detail">
-        <p>${item.protertyName}
-          <span>${item.org}</span>
+        <div class ='proterty_name'>
+        ${item.protertyName}
+          <p>${item.org}
           <img class='img2' src="../image/activeLove.svg">
         </p>
+        </div>
       </div>
     </div>`
   })
