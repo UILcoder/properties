@@ -18,6 +18,11 @@
     width: 30rem;
   }
 }
+@media (max-width: 600px) and (min-width: 100px) {
+  html {
+    font-size: 6px;
+  }
+}
 #about_contain #artical,
 #tenants_contain #artical {
   display: flex;
@@ -34,4 +39,8 @@
 .artical_right p {
   color: #7d003a;
   margin-bottom: 50px;
+}
+img {
+  width: 15rem;
+  height: 18rem;
 }

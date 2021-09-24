@@ -33,8 +33,8 @@ data.forEach(item => {
 })
 contain.innerHTML = content
 let arr = [...document.getElementsByClassName('contain')]
-outimg1 = document.getElementsByClassName('img1')
-outimg2 = document.getElementsByClassName('img2')
+outimg1 = [...document.getElementsByClassName('img1')]
+outimg2 = [...document.getElementsByClassName('img2')]
 shopping_car.forEach(i => {
   outimg1[i].style.display = 'none'
   outimg2[i].style.display = 'inline-block'
@@ -42,6 +42,7 @@ shopping_car.forEach(i => {
 arr.forEach(item => {
   item.onclick = detailInfo
 });
+
 
 setTimeout(() => window.parent.pageHeight(document.body.scrollHeight + 20), 0)
 function detailInfo() {
@@ -127,12 +128,13 @@ function add() {
     shopping_car.push(index)
   }
 
-  console.log(shopping_car)
+  console.log(shopping_car, index)
   outimg1[index].style.display = 'none'
   outimg2[index].style.display = 'inline-block'
   inimg1.style.display = 'none'
   inimg2.style.display = 'inline-block'
   sessionStorage.setItem('shopping_car', shopping_car)
+  return false
 }
 function low() {
   let del = shopping_car.findIndex(i => i == index)
@@ -142,4 +144,5 @@ function low() {
   inimg2.style.display = 'none'
   inimg1.style.display = 'inline-block'
   sessionStorage.setItem('shopping_car', shopping_car)
+  return false
 }

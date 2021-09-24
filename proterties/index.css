@@ -1,3 +1,11 @@
+@media (max-width: 600px) and (min-width: 100px) {
+  .img1,
+  #img1,
+  #img2,
+  .img2 {
+    height: 1.2rem;
+  }
+}
 #title {
   width: 100%;
   text-align: center;
@@ -80,16 +88,29 @@ b {
   color: #505050;
   border-bottom: solid 1px rgb(7, 7, 7);
 }
-/* .detail p span {
-  margin-top: 10px;
-  text-transform: uppercase;
-} */
+
 .img1,
 #img1,
 #img2,
 .img2 {
   height: 1.8rem;
   float: right;
+}
+@media (max-width: 600px) and (min-width: 100px) {
+  html {
+    font-size: 6px;
+  }
+  .img1,
+  #img1,
+  #img2,
+  .img2 {
+    height: 1.2rem;
+  }
+}
+@media (max-width: 900px) and (min-width: 600px) {
+  html {
+    font-size: 16px;
+  }
 }
 #detail_house {
   display: none;
@@ -195,3 +216,4 @@ b {
   height: 100%;
   margin-right: 10px;
 }
+@import url(../media.css);
